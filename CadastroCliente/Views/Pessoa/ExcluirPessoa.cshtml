@@ -1,0 +1,46 @@
+﻿@model CadastroCliente.Models.Pessoa
+
+@{
+    ViewData["Title"] = "ExcluirPessoa";
+}
+
+<h2><strong>Excluir Cadastro</strong></h2>
+<hr />
+
+<h3><strong>Tem certeza que deseja deletar?</strong></h3>
+<div>
+    <h5>Cliente</h5>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SobreNome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SobreNome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+    </dl>
+    
+    <form asp-action="ExcluirPessoa">
+        <input type="hidden" asp-for="PessoaId" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar para Lista</a>
+    </form>
+</div>
